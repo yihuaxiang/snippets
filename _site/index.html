@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<meta name="fragment" content="!">
+<title>Snippets | 敖武 snippet 分享</title>
+<meta name="description" content="敖武的代码收藏夹，Snippets 管理工具" />
+<meta name="keywords" content="分享技术,分享生活,snippets,aowu,敖武" />
+<meta name="email" content="barret.china@gmail.com" />
+<meta name="author" content="http://weibo.com/173248656" />
+<meta name="viewport" content="width=device-width,height=device-height,user-scalable=0">
+<link rel="stylesheet" href="public/css/main.css?v=1" />
+</head>
+
+<body>
+<div class="progress" id="progress">
+  <div></div>
+</div>
+<div class="header">
+  <a href="http://snippets.fudongdong.com"><h1>代码片段</h1></a>
+  <ul>
+    <li><a href="http://www.fudongdong.com/" target="_blank">敖武的博客</a></li>
+  </ul>
+</div>
+<div class="container">
+  <ul style="position:absolute;left:-9999px;">
+<li><a href="#!/snippets/htaccess/301-redirects/">301跳转</a></li>
+<li><a href="/snippets/htaccess/301-redirects/">301跳转</a></li>
+<li><a href="#!/">Snippets</a></li>
+<li><a href="/">Snippets</a></li>
+<li><a href="#!/sitemap.xml"></a></li>
+<li><a href="/sitemap.xml"></a></li>
+
+</ul>
+
+<span href="https://github.com/fudongdong/snippets/new/gh-pages/snippets" class="add-snippet" target="_blank">+<b>添加 Snippet</b></span>
+<div class="search-mask"><i class="icon search-close" title="关闭">&#xe624;</i></div>
+<div class="codeTypes" id="codeTypes"></div>
+<div class="codePreview" id="codePreview">
+  <div class="search">
+    <span class="search-info"></span>
+    <input type="text" placeholder="按 Enter 展示结果" id="q" name="q" autocomplete="false" />
+  </div>
+	<div class="typeList" id="typeList"></div>
+	<div class="codebox" id="codebox" data-baseurl="https://github.com/fudongdong/snippets/edit/gh-pages">
+		<i class="icon close" id="close" title="关闭预览">&#xe624;</i>
+    <a class="icon pen" title="编辑代码" href="#" target="_blank">&#xe601;</a>
+		<div class="code" id="code">
+      <i class="icon close" id="close">&#xe624;</i>
+      <div class="codectt" id="codectt"></div>
+    </div>
+	</div>
+</div>
+
+<script>
+var snippets = [
+  { type: "htaccess", title: "301跳转", url: "/snippets/htaccess/301-redirects/" },
+  { type: "", title: "Snippets", url: "/" },
+  { type: "", title: "", url: "/sitemap.xml" },
+{}].slice(0, -1);
+</script>
+
+
+</div>
+<script src="public/js/hl.js"></script>
+<script src="public/js/main.js?v=1"></script>
+</body>
+</html>
