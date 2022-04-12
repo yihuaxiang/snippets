@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<h2 id="pageTitle">{{ page.title }}<span class="edit"><a href="{{site.edit_path}}{{page.url}}" target="_blank">edit</a></span></h2>
+<div class="statement">
+	<p><strong time='{{page.date|date:"%Y-%m-%d"}}'>日期：</strong>{{page.date|date:"%Y-%m-%d"}}</p>
+	<p><strong>作者: </strong>{{site.author_info}}</p>
+</div>
+
+{{ content }}
+
+<div id="tags" style="margin-top:40px;padding: 20px 0;border-top: 1px solid #CCC;">
+	标签：
+{% for tag in page.tags %}
+    <span>{{ tag }}</span>
+{% endfor %}
+</div>
+
+<div class="page-paginator">
+	<span title="{{page.previous.title}}">
+	{% if page.previous.url %}
+		上一篇：<a href="{{page.previous.url}}">{{page.previous.title}}</a>
+    {% endif %}
+	</span><br />
+	<span title="{{page.next.title}}">
+        {% if page.next.url %}
+		下一篇：<a href="{{page.next.url}}">{{page.next.title}}</a>
+        {% endif %}
+	</span>
+</div>
+
+<div class="ds-thread" itemprop="comment" data-thread-key="{{page.id}}" data-title="{{page.title}}"></div>
+
