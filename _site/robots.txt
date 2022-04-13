@@ -1,3 +1,0 @@
-Sitemap: http://snippets.fudongdong.com/sitemap.xml
-User-agent: *
-Allow: /
