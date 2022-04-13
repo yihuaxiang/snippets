@@ -2,9 +2,6 @@ body,div,h1,h2,h3,h4,ul,li,p {
     margin: 0;
     padding: 0;
 }
-* {
-    transition: all 0.3s;
-}
 html, body {
     height: 100%;
     overflow-x: hidden;
@@ -84,7 +81,7 @@ table td {
 .header h1 {
     font-size: 30px;
     line-height: 64px;
-    color: #FFF;
+    color: #989898;
     font-family: fantasy,cursive,consolas;
     text-shadow: 1px 1px 1px #000, 1px 1px 3px #CCC;
     display: inline-block;

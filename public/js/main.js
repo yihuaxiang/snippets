@@ -89,7 +89,8 @@ var Snippet = {
       }
     });
     codebox.addEventListener("click", function(evt){
-      if(evt.target.getAttribute("id") == "close") {
+      console.info('click', evt.target, close);
+      if(evt.target.getAttribute("id") == "close" || evt.target.parentNode.getAttribute("id") == "close") {
         close.click();
       }
     });
