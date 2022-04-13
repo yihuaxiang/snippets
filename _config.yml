@@ -6,35 +6,20 @@ timezone: Asia/Shanghai
 home: http://www.fudongdong.com/
 demo: http://demo.fudongdong.com/
 base: http://snippets.fudongdong.com
-weibo: http://weibo.com/173248656
 edit_path: https://github.com/fudongdong/snippets/edit/gh-pages
 new_path: https://github.com/fudongdong/snippets/new/gh-pages/snippets
 author: 敖武
-author_en: Barret Lee
-email: barret.china@gmail.com
+author_en: yihuaxiang
 author_info: <a href="http://www.fudongdong.com">敖武</a>
 
 webrick:
   headers:
-    Author: Barret Lee
+    Author: 敖武
     About: http://fudongdong.com/about/
 
 gems:
   - jekyll-seo-tag
 #  - jekyll-feed
-
-# seo
-twitter:
-  username: barret_china
-logo: http://www.fudongdong.com/avatar150.png
-
-# feed
-# feed:
-#   path: atom.xml
-#   name: Snippets
-#   description: 敖武的代码收藏夹，Snippets 管理工具
-#   url: http://snippets.fudongdong.com
-#   author: 敖武
 
 defaults:
   -
