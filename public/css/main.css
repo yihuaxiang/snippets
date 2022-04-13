@@ -252,9 +252,6 @@ table td {
     margin-bottom: -1px;
     cursor: pointer;
 }
-.codeTypes li span:hover {
-    background: #FFF8EA;
-}
 .codeTypes li span {
     line-height: 40px;
     display: block;
@@ -291,9 +288,6 @@ table td {
 .typeList li a span {
     color: #555;
     font-weight: bold;
-}
-.typeList li a:hover {
-    background: #FFF8EA !important;
 }
 .typeList li.odd a {
     background: #FFF;
@@ -685,13 +679,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     margin-left: 0;
     padding-left: 15px;
     border-radius: 0;
-    background: -moz-linear-gradient(top,#eaecef 0,#003973 100%);
-    background: -webkit-gradient(linear,top,bottom,color-stop(0%,#eaecef),color-stop(100%,#003973));
-    background: -webkit-linear-gradient(top,#eaecef 0,#003973 100%);
-    background: -o-linear-gradient(top,#eaecef 0,#003973 100%);
-    background: -ms-linear-gradient(top,#eaecef 0,#003973 100%);
-    background: linear-gradient(to top,#eaecef 0,#003973 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eaecef', endColorstr='#003973', GradientType=1);
   }
   .search {
     top: -60px;
