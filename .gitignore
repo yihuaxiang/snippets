@@ -2,6 +2,7 @@ _drafts/
 node_modules/
 *.un~
 push.sh
+_site/
 push.bat
 .jekyll-metadata
 del.js
