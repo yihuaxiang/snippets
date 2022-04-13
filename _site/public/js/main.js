@@ -37,7 +37,9 @@ var Snippet = {
   initNav: function(){
     var dom = "<ul>", tag = true, type;
     for(var key in this.store) {
-      dom += "<li" + (tag ? " class='on'" : "") + "><span data-type=" + key + ">" + key + "</span></li>";
+      if(key) {
+        dom += "<li" + (tag ? " class='on'" : "") + "><span data-type=" + key + ">" + key + "</span></li>";
+      }
       if(tag) {
         tag = false;
         type = key;
