@@ -6,7 +6,7 @@ title: 循环执行
 
 ```shell
 while true; do
-    sleep 1
+    sleep 5
     pwd
 done
 ```
