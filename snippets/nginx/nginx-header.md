@@ -2,7 +2,7 @@
 title: nginx header 添加与删除
 ---
 
-网站博客部署在`OSS`上，访问`oss`的页面时都会自动下载，原始是：响应头中添加了`x-oss-force-download`、`Content-Disposition: attachmeng`等字段，故通过`nginx`转发时需要对`header`进行操作
+网站博客部署在`OSS`上，访问`oss`的页面时都会自动下载，原因是：响应头中添加了`x-oss-force-download`、`Content-Disposition: attachmeng`等字段，导致浏览器自动下载，故通过`nginx`转发时需要对`header`进行操作
 
 ## 添加 header
 
