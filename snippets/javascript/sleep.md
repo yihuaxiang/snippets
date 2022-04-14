@@ -24,4 +24,3 @@ async function bizMethod() {
 }
 ```
 
-nice~
