@@ -80,7 +80,7 @@ table td {
 }
 .header h1 {
     font-size: 30px;
-    line-height: 64px;
+    line-height: 57px;
     color: #989898;
     font-family: fantasy,cursive,consolas;
     text-shadow: 1px 1px 1px #000, 1px 1px 3px #CCC;
@@ -105,8 +105,8 @@ table td {
     right: 20px;
     top: 0;
     list-style-type: none;
-    height: 64px;
-    line-height: 64px;
+    height: 57px;
+    line-height: 57px;
 }
 .header ul li {
   float: left;
@@ -116,7 +116,7 @@ table td {
     color: #555;
     display: inline-block;
     height: 100%;
-    line-height: 64px;
+    line-height: 57px;
 }
 .header ul li a {
     color: #555;
