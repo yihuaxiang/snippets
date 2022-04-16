@@ -41,7 +41,7 @@ var snippets = [
   {% for item in site.pages %}
     {% assign type = item.dir | split: "/" %}
     {% if type != '/' %}
-      { type: "{{ type[2] }}", title: "{{ item.title }}", url: "{{site.base}}{{ item.url }}"},
+      { type: "{{ type[2] }}", title: "{{ item.title }}", url: "{{ item.url }}"},
     {% endif %}
   {% endfor %}{}
 ].slice(0, -1);
