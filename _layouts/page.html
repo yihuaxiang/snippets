@@ -10,17 +10,98 @@
 <meta property="og:site_name" content="敖武的博客 snippets">
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:type" content="website">
+  <style>
+    html,body,h1,ul {
+      margin: 0;
+      font-family: "lucida grande", "lucida sans unicode", lucida, "Helvetica Neue", helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+      font-size: 14px;
+    }
+    .header {
+      overflow: hidden;
+      padding: 0 20px;
+      position: relative;
+      height: 3.6rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      border-bottom: 1px solid #eaecef;
+    }
+    .header h1 {
+      font-size: 30px;
+      line-height: 57px;
+      color: #989898;
+      font-family: fantasy,cursive,consolas;
+      text-shadow: 1px 1px 1px #000, 1px 1px 3px #CCC;
+      display: inline-block;
+    }
+    .header span {
+      font-size: 13px;
+      display: inline-block;
+      margin-left: 0px;
+      color: #E4E4E4;
+      position: relative;
+      top: 10px;
+    }
+    .header span a {
+      color: #E4E4E4;
+    }
+    .header a:hover {
+      color: #3eaf7c;
+    }
+    .header ul {
+      position: absolute;
+      right: 20px;
+      top: 0;
+      list-style-type: none;
+      height: 57px;
+      line-height: 57px;
+    }
+    .header ul li {
+      float: left;
+      margin-left: 20px;
+      list-style: none;
+    }
+    .header ul li a {
+      color: #555;
+      display: inline-block;
+      height: 100%;
+      line-height: 57px;
+      text-decoration: none;
+    }
+    .header ul li a {
+      color: #555;
+    }
+    .header ul li a:hover {
+      color: #000;
+      text-decoration: underline;
+    }
+    .header ul li .icon {
+      margin-right: 4px;
+      vertical-align: middle;
+      transition: none;
+    }
+    .sub-container,.statement {
+      width: auto;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  </style>
 </head>
 
 <body>
-<div class="progress" id="progress">
-  <div></div>
+<div class="header">
+  <a href="{{site.base}}"><h1>代码片段</h1></a>
+  <ul>
+    <li><a href="{{site.home}}" target="_blank">敖武的博客</a></li>
+    <li><a href="{{site.github}}" target="_blank">
+      <img style="padding-top: 10px;" width="30" src="https://fudongdong-statics.oss-cn-beijing.aliyuncs.com/autoupload/2022-04-15/6001e7910411495db787234a01e720ce.GitHub (2).svg" />
+    </a></li>
+  </ul>
 </div>
 <div>
   <div class="statement">
     <p><strong>作者: </strong>{{site.author_info}}</p>
   </div>
-  <div class="ctt content__default">
+  <div class="sub-container content__default">
     {{ content }}
   </div>
 </div>
