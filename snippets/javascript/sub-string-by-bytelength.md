@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 按字节长度截取字符串
 ---
 

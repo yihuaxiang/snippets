@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 301跳转
 ---
 

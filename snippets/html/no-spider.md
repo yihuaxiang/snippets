@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 通过 meta 标签禁止爬虫爬取
 ---
 

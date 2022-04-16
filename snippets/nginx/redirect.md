@@ -1,4 +1,5 @@
 ---
+layout: page
 title: nginx 重定向 redirect
 ---
 

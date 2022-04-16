@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 数字序列
 ---
 

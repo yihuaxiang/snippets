@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 动态插入 js 脚本
 ---
 

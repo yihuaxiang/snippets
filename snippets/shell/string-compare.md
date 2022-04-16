@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 在 shell 中进行字符串比较
 ---
 

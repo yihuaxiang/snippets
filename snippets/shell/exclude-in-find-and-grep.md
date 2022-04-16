@@ -1,4 +1,5 @@
 ---
+layout: page
 title: find、grep 排除指定目录
 ---
 

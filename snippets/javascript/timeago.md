@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 时间戳转 X天之前、X小时之前
 ---
 

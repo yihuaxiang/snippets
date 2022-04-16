@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 加载中动画
 ---
 

@@ -1,4 +1,5 @@
 ---
+layout: page
 title: 文本对比
 ---
 
