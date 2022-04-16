@@ -1,4 +1,5 @@
 ---
+layout: page
 title: nginx header 添加与删除
 ---
 
