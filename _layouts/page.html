@@ -206,10 +206,13 @@
       color: #aaa;
     }
 
-    pre.highlight {
+    pre.highlight code:not(.hljs) {
       padding: 20px;
       overflow: auto;
       background: #f8f8f8;
+      display: inline-block;
+      max-width: 100%;
+      box-sizing: border-box;
     }
   </style>
 </head>
