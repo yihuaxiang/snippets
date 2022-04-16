@@ -4,8 +4,9 @@ title: Snippets
 ---
 
 <ul style="position:absolute;left:-9999px;">
-{% for item in site.pages %}<li><a href="#!{{ item.url }}">{{ item.title }}</a></li>
-<li><a href="{{ item.url }}">{{ item.title }}</a></li>
+{% for item in site.pages %}
+  <li><a href="#!{{ item.url }}">{{ item.title }}</a></li>
+  <li><a href=".{{ item.url }}">{{ item.title }}</a></li>
 {% endfor %}
 </ul>
 
@@ -41,7 +42,7 @@ var snippets = [
   {% for item in site.pages %}
     {% assign type = item.dir | split: "/" %}
     {% if type != '/' %}
-      { type: "{{ type[2] }}", title: "{{ item.title }}", url: "{{ item.url }}"},
+      { type: "{{ type[2] }}", title: "{{ item.title }}", url: ".{{ item.url }}"},
     {% endif %}
   {% endfor %}{}
 ].slice(0, -1);
