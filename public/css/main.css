@@ -131,27 +131,6 @@ table td {
     vertical-align: middle;
     transition: none;
 }
-.add-snippet {
-    position: absolute;
-    left: -120px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #EAEAEA;
-    cursor: pointer;
-}
-.add-snippet b {
-    display: block;
-    font-size: 12px;
-    margin-left: -25px;
-    opacity: 0;
-    color: #3eaf7c;
-}
-.add-snippet:hover b {
-    opacity: 1;
-}
-.add-snippet:hover {
-    color: #3eaf7c;
-}
 .container {
     width: 700px;
     position: relative;

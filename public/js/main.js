@@ -9,7 +9,6 @@ var code = document.querySelector("#code");
 var progress = document.querySelector("#progress");
 var q = document.querySelector("#q");
 var qinfo = document.querySelector(".search-info");
-var addSnippet = document.querySelector(".add-snippet");
 
 var Snippet = {
   cache: {},
@@ -101,30 +100,6 @@ var Snippet = {
       qinfo.style.opacity = 0;
       var type = document.querySelector(".codeTypes li.on span").textContent.toLowerCase();
       self.renderList(type);
-    });
-    addSnippet.addEventListener("click", function(evt){
-      window.open('https://github.com/yihuaxiang/snippets/issues/new');
-      return;
-      if(evt.metaKey) {
-        window.open(evt.target.getAttribute("href"));
-        return;
-      }
-      if(evt.target.nodeName.toLowerCase() != "a") {
-        fsubmit.removeAttribute("disabled");
-        evt.preventDefault();
-        if(document.querySelectorAll("#f_type option").length == 1) {
-          var spans = document.querySelectorAll(".codeTypes span");
-          var types = [];
-          for(var i = 0; i < spans.length; i++ ) {
-            var text = spans[i].textContent.toLowerCase();
-            types.push("<option value='" + text + "'>" + text + "</option>")
-          }
-          types.push("<option value='-1'>其他</option>");
-          var f_type = document.querySelector("#f_type")
-          f_type.innerHTML = types.join("\n");
-          f_type.value = f_type.querySelector("option").value;
-        }
-      }
     });
     q.onkeypress = q.onkeyup = q.onkeydown = q.onfocus = function(evt) {
       var val = q.value;
