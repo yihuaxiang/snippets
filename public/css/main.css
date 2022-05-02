@@ -20,7 +20,7 @@ a:hover {
     display: inline-block;
     color: #3eaf7c;
 }
-.typeList > ul,li, .codeTypes > ul li {
+.typeList > ul > li, .codeTypes > ul > li {
     list-style-type: none;
 }
 code {
