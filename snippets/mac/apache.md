@@ -6,13 +6,13 @@ title: 内置 Apache
 ### 启动内置 Apache 服务
 
 ```shell
-sudo  apachectl start
+sudo apachectl start
 ```
 
 ### 关闭内置 Apache 服务
 
 ```shell
-sudo  apachectl stop
+sudo apachectl stop
 ```
 
 ### 其他
