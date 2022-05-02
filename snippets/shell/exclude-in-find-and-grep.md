@@ -10,7 +10,7 @@ title: find、grep 排除指定目录
 grep -i --exclude-dir=node_modules -r "content" *
 ```
 
-> 通过`grep`查找内容速度过慢时，推荐使用，参考文档 [rgrep](https://www.fudongdong.com/tech/ripgrep.html)
+> 通过`grep`查找内容速度过慢时，推荐使用，参考文档 [rgrep](https://z.wiki/tech/ripgrep.html)
 
 ## find
 ```shell
