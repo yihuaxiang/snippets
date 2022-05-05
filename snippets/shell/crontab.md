@@ -54,4 +54,13 @@ MAILTO=root
 `crontab` 日志目录为 `/var/log/cron`
 
 
+## 其他类似方案
+
+### pm2
+
+`pm2`是基于`nodejs`的进程管理工具，可以配置`shell`执行周期性任务，
+也可以用来管理开机自启任务（通过保存进程状态，在开机时恢复进程状态，这一点上比`crontab`好用）。
+
+### chkconfig
+
 
