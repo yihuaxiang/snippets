@@ -64,3 +64,4 @@ MAILTO=root
 ### chkconfig
 
 
+参考文档： [chkconfig](https://www.linuxjournal.com/article/4445)
