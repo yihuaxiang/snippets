@@ -58,9 +58,28 @@ MAILTO=root
 
 ### pm2
 
-`pm2`是基于`nodejs`的进程管理工具，可以配置`shell`执行周期性任务，
+`pm2`是基于`nodejs`的进程管理工具，可以配合`shell`执行周期性任务，
 也可以用来管理开机自启任务（通过保存进程状态，在开机时恢复进程状态，这一点上比`crontab`好用）。
 
+#### 自动部署服务
+
+编写`shell`脚本，从`github`拉去代码、编译构建、部署到`nginx`中
+```shell
+cd path-of-project
+git pull
+npm run build
+
+mv -f dist/* path-of-nginx
+
+sleep 60 # 这里 sleep 一分钟是为了避免 pm2 过于频繁的执行该脚本
+```
+
+通过`pm2`持续性的运行该脚本
+```shell
+pm2 start shell-path
+```
+
+如果需要开启启动该脚本，可以通过`pm2 save`保存进程状态，开机便会自动运行。
 ### chkconfig
 
 
