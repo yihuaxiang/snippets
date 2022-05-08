@@ -82,6 +82,10 @@ pm2 start shell-path
 ```
 
 如果需要开启启动该脚本，可以通过`pm2 save`保存进程状态，开机便会自动运行。
+
+
+> 注：在使用 `pm2 save`之前需要确保`pm2`本身能够开机启动，执行以下命令并根据提示设置自启动`pm2 startup`
+
 ### chkconfig
 
 
