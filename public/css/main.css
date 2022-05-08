@@ -5,6 +5,7 @@ body,div,h1,h2,h3,h4,ul,li,p {
 html, body {
     height: 100%;
     overflow-x: hidden;
+    color: #2c3e50;
 }
 body, form, input, select, option {
     background: #FFF;
@@ -13,7 +14,7 @@ body, form, input, select, option {
     line-height: 1.2;
 }
 a {
-    color: #4a75b5;
+    color: #3eaf7c;
     text-decoration: none;
 }
 a:hover {
@@ -79,11 +80,11 @@ table td {
   border-bottom: 1px solid #eaecef;
 }
 .header h1 {
-    font-size: 30px;
     line-height: 57px;
-    color: #989898;
-    font-family: fantasy,cursive,consolas;
-    text-shadow: 1px 1px 1px #000, 1px 1px 3px #CCC;
+    font-family: BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
     display: inline-block;
 }
 .header span {
@@ -262,20 +263,15 @@ table td {
     text-overflow: ellipsis;
     position: relative;
 }
+.typeList li a.on {
+  color: #3eaf7c;
+}
 .typeList li a span {
     color: #555;
     font-weight: bold;
 }
 .typeList li.odd a {
     background: #FFF;
-}
-.typeList li a.on::after {
-    content: " ";
-    border: 4px solid #3eaf7c;
-    position: absolute;
-    right: 10px;
-    top: 16px;
-    border-radius: 100%;
 }
 .codePreview {
     position: relative;
