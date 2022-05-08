@@ -67,6 +67,8 @@ MAILTO=root
 ```shell
 cd path-of-project
 git pull
+
+npm i
 npm run build
 
 mv -f dist/* path-of-nginx
