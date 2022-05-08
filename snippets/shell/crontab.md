@@ -3,9 +3,11 @@ layout: page
 title: crontab
 ---
 
+
+
 `centos 8`默认已安装`crontab`，通过`crontab`可以设置周期性调度任务、启动时任务。
 
-`crontab`中的任务分为用户任务，`root`账号任务。
+`crontab`中的任务分为用户任务，系统级任务。
 
 ## 用户任务
 
@@ -27,10 +29,10 @@ crontab -r
 注：用户任务配置在目录`/var/spool/cron`下
 
 
-## `root` 账号任务
-`root`账号任务配置在`/etc/crontab`中，可配置定时任务，也可配置系统启动时需要执行的任务
+## 系统级任务
+系统级任务配置在`/etc/crontab`中，可配置定时任务，也可配置系统启动时需要执行的任务
 
-> 某些任务需要`root`账号启动，
+> 某些任务需要`root`账号启动，可配置在系统级任务中
 > 如：`nginx`默认占用`80`、`443`等特殊端口，而`centos`中，`1000`以内的端口需要`root`账号才能使用
 
 ```shell
@@ -93,3 +95,5 @@ pm2 start shell-path
 
 
 参考文档： [chkconfig](https://www.linuxjournal.com/article/4445)
+
+
