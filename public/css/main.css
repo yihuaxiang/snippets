@@ -14,7 +14,7 @@ body, form, input, select, option {
     line-height: 1.2;
 }
 a {
-    color: #3eaf7c;
+    color: #2c3e50;
     text-decoration: none;
 }
 a:hover {
@@ -124,7 +124,7 @@ table td {
     color: #555;
 }
 .header ul li a:hover {
-    color: #000;
+    color: #3eaf7c;
     text-decoration: underline;
 }
 .header ul li .icon {
