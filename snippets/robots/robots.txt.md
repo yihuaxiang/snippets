@@ -96,3 +96,5 @@ Crawl-delay: 10
 	<meta name="robots" content="noindex,nofollow" />
 </head>
 ```
+
+更详细介绍：[敖武的博客-robots.txt](https://z.wiki/misc/robots.txt.html)
