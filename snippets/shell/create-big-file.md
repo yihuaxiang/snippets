@@ -3,8 +3,6 @@ layout: page
 title: 创建大文件
 ---
 
-![Data Arranging_Outline.png](https://fudongdong-statics.oss-cn-beijing.aliyuncs.com/images/20220521/10e89e76c31749a982d85ca9b16c4c0a.png?x-oss-process=style/z.wiki)
-
 
 ### 使用`dd`创建大文件
 
