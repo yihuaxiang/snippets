@@ -15,3 +15,11 @@ find . -type f -exec ls -l {} \;
 ```shell
 find . -maxdepth 1 -name "*.log" | xargs -i  du -hs {}
 ```
+
+### 应用实战
+
+查找所有项目并自动拉取`master`分支上的最新代码
+
+```shell
+find . -type d -depth 1 -exec git --git-dir={}/.git --work-tree=$PWD/{} pull origin master \;
+```
