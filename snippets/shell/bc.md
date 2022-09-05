@@ -1,3 +1,4 @@
+
 ---
 layout: page
 title: bc
@@ -9,8 +10,9 @@ title: bc
 进行基础的数学计算
 
 ```shell
-echo 'scale=2; ( 32 / 5 )' | bc
-echo 'scale=2; ( 32 / 5 ) * 9' | bc
+echo "1.356 * 1.2" | bc -l
+echo '( 32 / 5 )' | bc
+echo '( 32 / 5 ) * 9 ' | bc
 ```
 
 设定小数精度
