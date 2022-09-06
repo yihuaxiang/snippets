@@ -7,6 +7,8 @@ title: bc
 
 ## 数学计算
 
+> `bc` 全称 `basic calculator`，支持加减乘除关系运算等多种运算方式
+
 进行基础的数学计算
 
 ```shell
