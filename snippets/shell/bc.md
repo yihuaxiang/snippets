@@ -1,6 +1,6 @@
 ---
 layout: page
-title: bc
+title: 数学计算-bc
 ---
 
 
