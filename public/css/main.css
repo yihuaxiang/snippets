@@ -649,7 +649,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   transition: none;
 }
 .codePreview.on .typeList {
-  max-height: 220px;
+  max-height: calc(50vh - 10px);
   margin-bottom: 30px;
   width: auto;
   transition: none;
