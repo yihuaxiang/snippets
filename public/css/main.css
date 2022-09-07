@@ -630,7 +630,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   margin-right: 0;
 }
 .typeList {
-  max-height: 220px;
+  max-height: calc(50vh - 10px);
   min-height: 0 !important;
   float: none;
   width: auto;
