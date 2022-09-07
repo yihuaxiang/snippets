@@ -69,7 +69,7 @@ export function downloadToCsv(jsonArray: object[], keyMap: object, fileName = '�
     downloadToCsv(dataWithTaskContent, {
       taskName: '任务名称',
       status: '任务状态',
-      _status: (s) => {
+      _status: (s) => { // _status 方法用于将枚举值转换成中文
         return {0: '进行中', 1: '已完成'}[s]
       },
       startDate: '任务开始时间',
