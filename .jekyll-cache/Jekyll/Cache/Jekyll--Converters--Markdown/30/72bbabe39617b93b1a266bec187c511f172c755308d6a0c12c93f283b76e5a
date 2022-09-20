@@ -1,0 +1,20 @@
+I"�<h2 id="数学计算">数学计算</h2>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">bc</code> 全称 <code class="language-plaintext highlighter-rouge">basic calculator</code>，支持加减乘除关系运算等多种运算方式</p>
+</blockquote>
+
+<p>进行基础的数学计算</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s2">"1.356 * 1.2"</span> | bc <span class="nt">-l</span>
+<span class="nb">echo</span> <span class="s1">'( 32 / 5 )'</span> | bc
+<span class="nb">echo</span> <span class="s1">'( 32 / 5 ) * 9 '</span> | bc
+</code></pre></div></div>
+
+<p>设定小数精度</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="s1">'scale=2; ( 32 / 5 )'</span> | bc
+<span class="nb">echo</span> <span class="s1">'scale=2; ( 32 / 5 ) * 9'</span> | bc
+
+</code></pre></div></div>
+:ET

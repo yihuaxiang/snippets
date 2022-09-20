@@ -1,0 +1,16 @@
+I"�<p>动态插入 js 脚本</p>
+
+<pre><code class="language-JavaScript">var injectScript = (function () {
+  var relative = document.getElementsByTagName('script')[0];
+
+  return function (src, callback) {
+    var script = document.createElement('script');
+    script.async = 1;
+    script.src = src;
+    if (callback) script.onload = callback.call(script);
+    relative.parentNode.insertBefore(script, relative);
+    return script;
+  }
+})();
+</code></pre>
+:ET

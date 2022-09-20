@@ -1,0 +1,5 @@
+I"T<p>两个文件进行<code class="language-plaintext highlighter-rouge">diff</code>，先排序、后对比。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash <span class="nt">-c</span> <span class="s1">'vimdiff &lt;(sort text2) &lt;(sort text1)'</span>
+</code></pre></div></div>
+:ET

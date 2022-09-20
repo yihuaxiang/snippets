@@ -1,0 +1,5 @@
+I"�<p>并发执行<code class="language-plaintext highlighter-rouge">curl</code></p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xargs <span class="nt">-I</span> % <span class="nt">-P</span> 8 curl <span class="nt">-X</span> POST  <span class="s2">"https://z.wiki"</span>  &lt; &lt;<span class="o">(</span><span class="nb">printf</span> <span class="s1">'%s\n'</span> <span class="o">{</span>1..4<span class="o">})</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,10 @@
+I"�<h3 id="静态资源缓存">静态资源缓存</h3>
+
+<p>设置为一天缓存，更多缓存配置可参考<a href="https://z.wiki/tech/nginx-cache.html">nginx 缓存</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location ~* .(?:css|js)$ {
+  expires 1d;
+  add_header Cache-Control "public";
+}
+</code></pre></div></div>
+:ET

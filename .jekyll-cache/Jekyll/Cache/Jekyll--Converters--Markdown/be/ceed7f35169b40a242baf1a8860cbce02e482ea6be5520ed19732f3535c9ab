@@ -1,0 +1,15 @@
+I"�<p>通过<code class="language-plaintext highlighter-rouge">find</code>、<code class="language-plaintext highlighter-rouge">grep</code>查找文件、内容的时候排查指定目录（如<code class="language-plaintext highlighter-rouge">node_modules</code>）</p>
+
+<h2 id="grep">grep</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">grep</span> <span class="nt">-i</span> <span class="nt">--exclude-dir</span><span class="o">=</span>node_modules <span class="nt">-r</span> <span class="s2">"content"</span> <span class="k">*</span>
+</code></pre></div></div>
+
+<blockquote>
+  <p>通过<code class="language-plaintext highlighter-rouge">grep</code>查找内容速度过慢时，推荐使用，参考文档 <a href="https://z.wiki/tech/ripgrep.html">rgrep</a></p>
+</blockquote>
+
+<h2 id="find">find</h2>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find <span class="nb">.</span> <span class="nt">-name</span> <span class="s2">"package.json"</span> <span class="o">!</span> <span class="nt">-path</span> <span class="s2">"*node_modules*"</span>
+</code></pre></div></div>
+
+:ET

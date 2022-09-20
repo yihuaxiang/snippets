@@ -1,0 +1,86 @@
+I"�<p><code class="language-plaintext highlighter-rouge">centos 8</code>默认已安装<code class="language-plaintext highlighter-rouge">crontab</code>，通过<code class="language-plaintext highlighter-rouge">crontab</code>可以设置周期性调度任务、启动时任务。</p>
+
+<p><code class="language-plaintext highlighter-rouge">crontab</code>中的任务分为用户任务，系统级任务。</p>
+
+<h2 id="用户任务">用户任务</h2>
+
+<p>查看用户任务</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab <span class="nt">-l</span>
+</code></pre></div></div>
+
+<p>编辑用户任务</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab <span class="nt">-e</span>
+</code></pre></div></div>
+
+<p>清空任务</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>crontab <span class="nt">-r</span>
+</code></pre></div></div>
+
+<p>注：用户任务配置在目录<code class="language-plaintext highlighter-rouge">/var/spool/cron</code>下</p>
+
+<h2 id="系统级任务">系统级任务</h2>
+<p>系统级任务配置在<code class="language-plaintext highlighter-rouge">/etc/crontab</code>中，可配置定时任务，也可配置系统启动时需要执行的任务</p>
+
+<blockquote>
+  <p>某些任务需要<code class="language-plaintext highlighter-rouge">root</code>账号启动，可配置在系统级任务中
+如：<code class="language-plaintext highlighter-rouge">nginx</code>默认占用<code class="language-plaintext highlighter-rouge">80</code>、<code class="language-plaintext highlighter-rouge">443</code>等特殊端口，而<code class="language-plaintext highlighter-rouge">centos</code>中，<code class="language-plaintext highlighter-rouge">1000</code>以内的端口需要<code class="language-plaintext highlighter-rouge">root</code>账号才能使用</p>
+</blockquote>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">SHELL</span><span class="o">=</span>/bin/bash
+<span class="nv">PATH</span><span class="o">=</span>/sbin:/bin:/usr/sbin:/usr/bin
+<span class="nv">MAILTO</span><span class="o">=</span>root
+
+<span class="c"># For details see man 4 crontabs</span>
+
+<span class="c"># Example of job definition:</span>
+<span class="c"># .---------------- minute (0 - 59)</span>
+<span class="c"># |  .------------- hour (0 - 23)</span>
+<span class="c"># |  |  .---------- day of month (1 - 31)</span>
+<span class="c"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span>
+<span class="c"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span>
+<span class="c"># |  |  |  |  |</span>
+<span class="c"># *  *  *  *  * user-name  command to be executed</span>
+
+@reboot root /home/path/start.sh <span class="c"># 系统启动时执行的任务</span>
+</code></pre></div></div>
+
+<h2 id="查看日志">查看日志</h2>
+
+<p><code class="language-plaintext highlighter-rouge">crontab</code> 日志目录为 <code class="language-plaintext highlighter-rouge">/var/log/cron</code></p>
+
+<h2 id="其他类似方案">其他类似方案</h2>
+
+<h3 id="pm2">pm2</h3>
+
+<p><code class="language-plaintext highlighter-rouge">pm2</code>是基于<code class="language-plaintext highlighter-rouge">nodejs</code>的进程管理工具，可以配合<code class="language-plaintext highlighter-rouge">shell</code>执行周期性任务，
+也可以用来管理开机自启任务（通过保存进程状态，在开机时恢复进程状态，这一点上比<code class="language-plaintext highlighter-rouge">crontab</code>好用）。</p>
+
+<h4 id="自动部署服务">自动部署服务</h4>
+
+<p>编写<code class="language-plaintext highlighter-rouge">shell</code>脚本，从<code class="language-plaintext highlighter-rouge">github</code>拉去代码、编译构建、部署到<code class="language-plaintext highlighter-rouge">nginx</code>中</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>path-of-project
+git pull
+
+npm i
+npm run build
+
+<span class="nb">mv</span> <span class="nt">-f</span> dist/<span class="k">*</span> path-of-nginx
+
+<span class="nb">sleep </span>60 <span class="c"># 这里 sleep 一分钟是为了避免 pm2 过于频繁的执行该脚本</span>
+</code></pre></div></div>
+
+<p>通过<code class="language-plaintext highlighter-rouge">pm2</code>持续性的运行该脚本</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pm2 start shell-path
+</code></pre></div></div>
+
+<p>如果需要开机自动启动该脚本，可以通过<code class="language-plaintext highlighter-rouge">pm2 save</code>保存进程状态，开机便会自动运行。</p>
+
+<blockquote>
+  <p>注：在使用 <code class="language-plaintext highlighter-rouge">pm2 save</code>之前需要确保<code class="language-plaintext highlighter-rouge">pm2</code>本身能够开机启动，执行以下命令并根据提示设置自启动<code class="language-plaintext highlighter-rouge">pm2 startup</code></p>
+</blockquote>
+
+<h3 id="chkconfig">chkconfig</h3>
+
+<p>参考文档： <a href="https://www.linuxjournal.com/article/4445">chkconfig</a></p>
+
+:ET

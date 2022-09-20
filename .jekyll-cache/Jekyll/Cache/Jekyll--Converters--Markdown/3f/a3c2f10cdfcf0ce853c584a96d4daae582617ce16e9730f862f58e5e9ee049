@@ -1,0 +1,22 @@
+I"�<p>单页面重定向</p>
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">location</span> <span class="p">=</span> <span class="n">/oldpage.html</span> <span class="p">{</span>
+        <span class="kn">return</span> <span class="mi">301</span> <span class="s">http://example.org/newpage.html</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>整站重定向</p>
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">server</span> <span class="p">{</span>
+    <span class="kn">server_name</span> <span class="s">old-site.com</span>
+    <span class="s">return</span> <span class="mi">301</span> <span class="nv">$scheme</span><span class="p">:</span><span class="n">//new-site.com</span><span class="nv">$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>子路径重定向</p>
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">location</span> <span class="n">/old-site</span> <span class="p">{</span>
+    <span class="kn">rewrite</span> <span class="s">^/old-site/(.*)</span> <span class="s">http://example.org/new-site/</span><span class="nv">$1</span> <span class="s">permanent</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

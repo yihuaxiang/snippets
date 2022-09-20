@@ -1,0 +1,82 @@
+I"�<h1 id="robotstxt-是什么">robots.txt 是什么</h1>
+
+<p><code class="language-plaintext highlighter-rouge">robots.txt</code> 是位于网站根目录下的纯文本文件，用于告知网络爬虫”改网站中哪些可以被爬取，哪些不可以被爬取”。</p>
+
+<p><code class="language-plaintext highlighter-rouge">robots.txt</code> 只是约定俗成的协议，<code class="language-plaintext highlighter-rouge">Google</code>、百度、<code class="language-plaintext highlighter-rouge">bing</code>等爬虫都会遵守该规范，但并非所有搜索引擎都支持，故通过<code class="language-plaintext highlighter-rouge">robots.txt</code>无法 100% 地保证爬取效果（屏蔽效果）。</p>
+
+<h1 id="robotstxt-怎么用">robots.txt 怎么用</h1>
+
+<p>允许所有的爬虫：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Allow:/
+</code></pre></div></div>
+
+<p>仅允许特定的爬虫：（name_spider用真实名字代替）</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: name_spider
+Allow:
+</code></pre></div></div>
+
+<p>拦截所有的爬虫：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /
+</code></pre></div></div>
+
+<p>禁止所有爬虫访问特定目录：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /cgi-bin/
+Disallow: /images/
+Disallow: /tmp/
+Disallow: /private/
+</code></pre></div></div>
+
+<p>仅禁止坏爬虫访问特定目录（BadBot用真实的名字代替）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: BadBot
+Disallow: /private/
+</code></pre></div></div>
+
+<p>禁止所有爬虫访问特定文件类型：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+</code></pre></div></div>
+
+<h1 id="非标准扩展协议">非标准扩展协议</h1>
+
+<h2 id="sitemaps">Sitemaps</h2>
+
+<p>目前主流搜索引擎均支持<code class="language-plaintext highlighter-rouge">Sitemap</code>，<code class="language-plaintext highlighter-rouge">sitemap</code>用于告诉浏览器网站都包含哪些<code class="language-plaintext highlighter-rouge">URL</code>，</p>
+
+<p>使用方法（写到 <code class="language-plaintext highlighter-rouge">robots.txt</code> 中）</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Sitemap: &lt;path-to-sitemap.xml&gt;
+</code></pre></div></div>
+
+<h2 id="crawl-delay-指令">Crawl-delay 指令</h2>
+
+<p><code class="language-plaintext highlighter-rouge">Crawl-delay</code>参数设置爬虫的爬取时间间隔，避免对服务器的性能造成影响</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>User-agent: *
+Crawl-delay: 10
+# 每次爬取等待10秒后继续爬取其他链接
+</code></pre></div></div>
+
+<h1 id="其他替代品">其他替代品</h1>
+
+<p><code class="language-plaintext highlighter-rouge">robots.txt</code>是最为广泛使用的方法，
+此外也可以通过<code class="language-plaintext highlighter-rouge">robots Meta</code>标签针对特定页面做设置。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+	<span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"noindex,nofollow"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre></div></div>
+
+<p>更详细介绍：<a href="https://z.wiki/misc/robots.txt.html">敖武的博客-robots.txt</a></p>
+:ET

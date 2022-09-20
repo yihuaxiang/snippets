@@ -1,0 +1,11 @@
+I"�<p>单页面：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Redirect 301 /oldpage.html https://www.yoursite.com/newpage.html
+Redirect 301 /oldpage2.html https://www.yoursite.com/folder/
+</code></pre></div></div>
+
+<p>整站：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Redirect 301 / https://newsite.com/
+</code></pre></div></div>
+:ET

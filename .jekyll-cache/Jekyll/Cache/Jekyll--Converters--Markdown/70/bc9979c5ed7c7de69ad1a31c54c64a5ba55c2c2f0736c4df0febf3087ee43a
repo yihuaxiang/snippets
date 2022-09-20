@@ -1,0 +1,10 @@
+I"�<p>所有的爬虫走开：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"robots"</span> <span class="na">content=</span><span class="s">"noindex"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<p>不要爬这个链接：</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"privatepage.html"</span> <span class="na">rel=</span><span class="s">"nofollow"</span><span class="nt">&gt;</span>私有链接<span class="nt">&lt;/a&gt;</span>
+</code></pre></div></div>
+:ET

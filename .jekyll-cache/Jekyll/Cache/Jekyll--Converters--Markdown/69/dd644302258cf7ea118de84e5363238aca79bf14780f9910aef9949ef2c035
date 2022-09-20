@@ -1,0 +1,19 @@
+I"�<p>设置<code class="language-plaintext highlighter-rouge">cookie</code></p>
+
+<pre><code class="language-JavaScript">function setCookie(name, value, domain, expriesDays, encode = false) {
+  const Days = expriesDays || 10
+  const exp = new Date()
+  exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000)
+  value = encode ? escape(value) : value
+  document.cookie = `${name}=${value};domain=${domain};path=/;expires=${exp.toUTCString()}`
+}
+</code></pre>
+
+<p>读取<code class="language-plaintext highlighter-rouge">cookie</code></p>
+
+<pre><code class="language-JavaScript">function getCookie(k) {
+  const res = RegExp('(^|; )' + encodeURIComponent(k) + '=([^;]*)').exec(document.cookie)
+  return res &amp;&amp; res[2]
+}
+</code></pre>
+:ET

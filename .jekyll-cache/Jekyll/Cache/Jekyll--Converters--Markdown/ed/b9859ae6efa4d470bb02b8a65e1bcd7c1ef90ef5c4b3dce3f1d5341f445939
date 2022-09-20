@@ -1,0 +1,17 @@
+I"�<h3 id="启动内置-apache-服务">启动内置 Apache 服务</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apachectl start
+</code></pre></div></div>
+
+<h3 id="关闭内置-apache-服务">关闭内置 Apache 服务</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apachectl stop
+</code></pre></div></div>
+
+<h3 id="其他">其他</h3>
+
+<ol>
+  <li>站点跟目录 <code class="language-plaintext highlighter-rouge">/Library/WebServer/Documents/</code></li>
+  <li>配置路径 <code class="language-plaintext highlighter-rouge">/etc/apache2/httpd.conf</code></li>
+</ol>
+:ET

@@ -1,0 +1,10 @@
+I"�<p>反向代理并追加参数</p>
+<div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">location</span> <span class="n">/v1/resources</span> <span class="p">{</span>
+    <span class="kn">resolver</span> <span class="mi">8</span><span class="s">.8.8.8</span><span class="p">;</span>
+    <span class="kn">proxy_pass</span> <span class="s">https://domain.com</span><span class="nv">$uri</span><span class="s">?key=value</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<p>设置<code class="language-plaintext highlighter-rouge">resolver</code>是因为<code class="language-plaintext highlighter-rouge">proxy_pass</code>转发到某个域名时会尝试自行从<code class="language-plaintext highlighter-rouge">DNS</code>缓存中获取域名解析后的<code class="language-plaintext highlighter-rouge">ip</code>，
+由于未设置域名解析服务导致如果没有缓存就会报错。</p>
+:ET

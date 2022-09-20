@@ -1,0 +1,7 @@
+I"{<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="k">for </span>n <span class="k">in</span> <span class="o">{</span>1..5<span class="o">}</span>
+<span class="k">do
+  </span><span class="nb">echo</span> <span class="nv">$n</span>
+<span class="k">done</span>
+</code></pre></div></div>
+:ET

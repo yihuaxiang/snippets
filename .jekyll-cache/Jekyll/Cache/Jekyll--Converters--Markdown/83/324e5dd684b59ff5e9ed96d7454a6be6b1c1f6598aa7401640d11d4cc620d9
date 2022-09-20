@@ -1,0 +1,21 @@
+I"l<p>sleep 方法：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nx">sleep</span><span class="p">(</span><span class="nx">milliseconds</span><span class="p">):</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">boolean</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">resolve</span><span class="p">(</span><span class="nx">milliseconds</span><span class="p">);</span>
+    <span class="p">},</span> <span class="nx">milliseconds</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>使用方法：</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">async</span> <span class="kd">function</span> <span class="nx">bizMethod</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ... do something</span>
+    <span class="k">await</span> <span class="nx">sleep</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span> <span class="c1">// sleep 1秒</span>
+    <span class="c1">// ... do something else</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+:ET

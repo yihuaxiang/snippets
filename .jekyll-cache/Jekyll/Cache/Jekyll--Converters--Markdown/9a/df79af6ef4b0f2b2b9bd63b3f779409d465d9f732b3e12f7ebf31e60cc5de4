@@ -1,0 +1,9 @@
+I"s<p>根据坐标获取道路名称：</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-s</span> <span class="s2">"https://restapi.amap.com/v3/geocode/regeo?output=json&amp;location=116.310003,39.991957&amp;key=xxx&amp;radius=1000&amp;extensions=all"</span> | jq <span class="nb">.</span> | <span class="nb">grep</span> <span class="s2">"name"</span> | <span class="nb">head</span> <span class="nt">-1</span> | <span class="nb">awk</span> <span class="nt">-F</span> <span class="s2">":"</span> <span class="s1">'{print $2}'</span> | <span class="nb">sed</span> <span class="s1">'s/"//g'</span> | <span class="nb">sed</span> <span class="s1">'s/,//g'</span> 
+</code></pre></div></div>
+
+<p>注1：<code class="language-plaintext highlighter-rouge">Mac</code> 系统安装<code class="language-plaintext highlighter-rouge">GNU</code>版的<code class="language-plaintext highlighter-rouge">curl</code></p>
+
+<p>注2：<code class="language-plaintext highlighter-rouge">xxx</code>需替换，请自动去 <a href="https://lbs.amap.com/">高德地图 LBS</a> 注册</p>
+:ET

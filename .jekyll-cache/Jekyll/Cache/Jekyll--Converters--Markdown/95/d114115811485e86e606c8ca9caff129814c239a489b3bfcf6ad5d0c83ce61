@@ -1,0 +1,21 @@
+I"�<p>网站博客部署在<code class="language-plaintext highlighter-rouge">OSS</code>上，访问<code class="language-plaintext highlighter-rouge">oss</code>的页面时都会自动下载，原因是：响应头中添加了<code class="language-plaintext highlighter-rouge">x-oss-force-download</code>、<code class="language-plaintext highlighter-rouge">Content-Disposition: attachmeng</code>等字段，导致浏览器自动下载，故通过<code class="language-plaintext highlighter-rouge">nginx</code>转发时需要对<code class="language-plaintext highlighter-rouge">header</code>进行操作</p>
+
+<h2 id="添加-header">添加 header</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location / {
+    ...
+    add_header X-Frame-Options SAMEORIGIN;
+    add_header X-Content-Type-Options nosniff;
+    add_header Access-Control-Allow-Origin *; # 允许跨域访问
+}
+</code></pre></div></div>
+
+<h2 id="删除-header">删除 header</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>location / {
+    ...
+    proxy_hide_header Content-Disposition;
+    proxy_hide_header x-oss-force-download;
+}
+</code></pre></div></div>
+:ET

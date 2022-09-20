@@ -1,0 +1,11 @@
+I"�<p>在 shell 中进行数字比较</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="o">[</span>2 <span class="nt">-gt</span> 3]
+     <span class="k">then
+     </span>print <span class="s2">"2 is greater"</span>
+     <span class="k">else
+     </span>print <span class="s2">"2 is not greater"</span>
+<span class="k">fi</span>
+</code></pre></div></div>
+
+:ET

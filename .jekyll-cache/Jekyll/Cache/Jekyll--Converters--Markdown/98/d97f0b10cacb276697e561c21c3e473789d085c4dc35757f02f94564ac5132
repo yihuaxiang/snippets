@@ -1,0 +1,8 @@
+I"�<p>循环执行，间隔<code class="language-plaintext highlighter-rouge">5</code>秒</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while </span><span class="nb">true</span><span class="p">;</span> <span class="k">do
+    </span><span class="nb">sleep </span>5
+    <span class="nb">pwd
+</span><span class="k">done</span>
+</code></pre></div></div>
+:ET

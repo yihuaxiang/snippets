@@ -1,0 +1,6 @@
+I"4<p>查看所有文件、文件夹大小</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">du</span> <span class="nt">-hs</span> <span class="k">*</span> | <span class="nb">sort</span> <span class="nt">-h</span>
+</code></pre></div></div>
+
+:ET

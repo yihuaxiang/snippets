@@ -1,0 +1,16 @@
+I"1<h3 id="使用dd创建大文件">使用<code class="language-plaintext highlighter-rouge">dd</code>创建大文件</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">dd </span><span class="k">if</span><span class="o">=</span>/dev/zero <span class="nv">of</span><span class="o">=</span>./test.file <span class="nv">bs</span><span class="o">=</span>1024 <span class="nv">count</span><span class="o">=</span>1M
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">dd</code>会不停从<code class="language-plaintext highlighter-rouge">/dev/zero</code>中读取数据并写入<code class="language-plaintext highlighter-rouge">./test.file</code>中，在创建大文件时会消耗一定时间。</p>
+
+<h3 id="使用fallocate创建大文件">使用<code class="language-plaintext highlighter-rouge">fallocate</code>创建大文件</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fallocate <span class="nt">-l</span> 10G gentoo_root.img
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">fallocate</code>是创建大文件的最优选择，磁盘会直接给该文件分配指定的空间，
+由于不会写入内容所以创建速度极快。</p>
+
+:ET
