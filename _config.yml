@@ -5,13 +5,13 @@ timezone: Asia/Shanghai
 
 home: https://www.fudongdong.com/
 demo: https://demo.fudongdong.com/
-base: https://snippets.fudongdong.com
+base: https://snippets.z.wiki
 github: https://github.com/yihuaxiang/snippets
 edit_path: https://github.com/yihuaxiang/snippets/edit/master
 new_path: https://github.com/yihuaxiang/snippets/new/master/snippets
 author: 敖武
 author_en: yihuaxiang
-author_info: <a href="https://www.fudongdong.com">敖武</a>
+author_info: <a href="https://z.wiki">敖武</a>
 
 webrick:
   headers:
