@@ -3,7 +3,7 @@ markdown: kramdown
 permalink: /:year/:month/:day/:title/
 timezone: Asia/Shanghai
 
-home: https://www.fudongdong.com/
+home: https://z.wiki/
 demo: https://demo.fudongdong.com/
 base: https://snippets.z.wiki
 github: https://github.com/yihuaxiang/snippets
