@@ -15,3 +15,4 @@ Redirect 301 /oldpage2.html https://www.yoursite.com/folder/
 ```
 Redirect 301 / https://newsite.com/
 ```
+
